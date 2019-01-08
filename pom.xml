@@ -26,6 +26,12 @@
     <dependencies>
 
         <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo-registry-api</artifactId>
             <version>${dubbo.version}</version>
