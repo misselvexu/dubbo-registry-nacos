@@ -441,11 +441,12 @@ public class NacosRegistry extends FailbackRegistry {
     }
 
     private String getServiceName(URL url, String category) {
-        StringBuilder serviceNameBuilder = new StringBuilder(category);
-        appendIfPresent(serviceNameBuilder, url, Constants.INTERFACE_KEY);
-        appendIfPresent(serviceNameBuilder, url, Constants.VERSION_KEY);
-        appendIfPresent(serviceNameBuilder, url, Constants.GROUP_KEY);
-        return serviceNameBuilder.toString();
+//        StringBuilder serviceNameBuilder = new StringBuilder(category);
+//        appendIfPresent(serviceNameBuilder, url, Constants.INTERFACE_KEY);
+//        appendIfPresent(serviceNameBuilder, url, Constants.VERSION_KEY);
+//        appendIfPresent(serviceNameBuilder, url, Constants.GROUP_KEY);
+//        return serviceNameBuilder.toString();
+        return url.getParameter(Constants.APPLICATION_KEY);
     }
 
     private void appendIfPresent(StringBuilder target, URL url, String parameterName) {
